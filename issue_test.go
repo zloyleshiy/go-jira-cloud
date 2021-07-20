@@ -190,10 +190,10 @@ func TestIssueService_AddComment(t *testing.T) {
 
 	c := &Comment{
 		Body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget venenatis elit. Duis eu justo eget augue iaculis fermentum. Sed semper quam laoreet nisi egestas at posuere augue semper.",
-		Visibility: CommentVisibility{
-			Type:  "role",
-			Value: "Administrators",
-		},
+		//Visibility: CommentVisibility{
+		//	Type:  "role",
+		//	Value: "Administrators",
+		//},
 	}
 	comment, _, err := testClient.Issue.AddComment("10000", c)
 	if comment == nil {
@@ -218,10 +218,10 @@ func TestIssueService_UpdateComment(t *testing.T) {
 	c := &Comment{
 		ID:   "10001",
 		Body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget venenatis elit. Duis eu justo eget augue iaculis fermentum. Sed semper quam laoreet nisi egestas at posuere augue semper.",
-		Visibility: CommentVisibility{
-			Type:  "role",
-			Value: "Administrators",
-		},
+		//Visibility: CommentVisibility{
+		//	Type:  "role",
+		//	Value: "Administrators",
+		//},
 	}
 	comment, _, err := testClient.Issue.UpdateComment("10000", c)
 	if comment == nil {
@@ -315,10 +315,10 @@ func TestIssueService_AddLink(t *testing.T) {
 		},
 		Comment: &Comment{
 			Body: "Linked related issue!",
-			Visibility: CommentVisibility{
-				Type:  "group",
-				Value: "jira-software-users",
-			},
+			//Visibility: CommentVisibility{
+			//	Type:  "group",
+			//	Value: "jira-software-users",
+			//},
 		},
 	}
 	resp, err := testClient.Issue.AddLink(il)
