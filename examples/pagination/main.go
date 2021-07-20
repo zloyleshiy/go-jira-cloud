@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	jira "github.com/andygrunwald/go-jira"
+	jira "github.com/zloyleshiy/go-jira-cloud"
 )
 
 // GetAllIssues will implement pagination of api and get all the issues.
